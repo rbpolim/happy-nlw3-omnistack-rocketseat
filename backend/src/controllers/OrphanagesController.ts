@@ -83,6 +83,7 @@ export default {
             
         await orphanagesRepository.save(orphanage)
 
-        return res.status(201).json(orphanage)
+        return res.status(201)
+        .json(orphanageView.render(orphanage))
     },
 }
